@@ -1,4 +1,4 @@
-#Back Bascula Autoatendida
+# Back Bascula Autoatendida
 
 Este proyecto corresponde al backend de un software completo, por lo que la parte front consumira los recursos del back.
 La comunicacion se desarrolla por medio de peticiones Rest. Autenticacion por medio del local storage. 
