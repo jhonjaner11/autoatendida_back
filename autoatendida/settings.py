@@ -25,14 +25,14 @@ SECRET_KEY = 'm5in3wzaaexls$lh*8wt47djeq=2f_y89=v3#u&umuy_$#9f6k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 CORS_ORIGIN_ALLOW_ALL= True
 CORS_ORIGIN_WHITELIST =  (
-    'localhost:8080'
+    '*'
 )
 
 INSTALLED_APPS = [
@@ -42,9 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pesaje',
+    'rest_framework.authtoken',
     'rest_framework',
     'corsheaders',
+    'pesaje',
 ]
 
 MIDDLEWARE = [
@@ -89,6 +90,11 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': {
+        'rest_framework.permissions.IsAuthenticated'
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -118,10 +124,10 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
-USE_TZ = True
-
+USE_TZ =False
+DATETIME_FORMAT="%Y-%m-%d%H:%M:%S"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
