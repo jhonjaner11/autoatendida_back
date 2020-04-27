@@ -1,4 +1,4 @@
-astroid==2.0.4
+astroid
 colorama==0.3.9
 Django==2.1
 django-cors-headers==2.2.0
